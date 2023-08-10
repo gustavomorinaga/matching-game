@@ -1,0 +1,52 @@
+/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+
+@import '@fontsource/poppins';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	color: $text-color;
+	background-color: $background-color;
+	overflow: hidden;
+}
+
+main {
+	display: block;
+	min-height: 100vh;
+}
+
+h1 {
+	font-size: 4rem;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+h1 + button {
+	width: max-content;
+	margin-top: 2rem;
+	margin-inline: auto;
+	border: 4px solid $primary-color;
+}
+
+button {
+	padding: 1rem 2rem;
+	font-size: 2rem;
+	font-family: inherit;
+	font-weight: bold;
+	color: inherit;
+	background: none;
+	border-radius: 1rem;
+	border: none;
+	text-transform: uppercase;
+	cursor: pointer;
+}
