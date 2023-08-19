@@ -1,17 +1,21 @@
 <script lang="ts">
-	import { Card, Matches, Timer } from '$lib/components';
-	import { changeGameState, matchCards, selectCard, startTimer } from '$lib/functions';
+	import { Attempts, Card, Matches, Timer } from '$lib/components';
+	import { changeGameState, matchCards, pauseGame, selectCard, startTimer } from '$lib/functions';
 	import { GAME } from '$lib/stores';
 
-	$: $GAME.selected.length === 2 && matchCards();
 	$: $GAME.maxMatches === $GAME.matches.length && changeGameState('won');
 	$: $GAME.time < 0 && changeGameState('lost');
 	$: $GAME.state === 'playing' && !$GAME.timerId && startTimer();
+	$: $GAME.selected.length === 2 && matchCards();
 </script>
+
+<button class="pause" on:click={pauseGame}>⏸</button>
 
 <Timer />
 
 <Matches />
+
+<Attempts />
 
 <section class="cards">
 	{#each $GAME.grid as card, cardIndex}
@@ -31,6 +35,11 @@
 </section>
 
 <style lang="scss">
+	button.pause {
+		margin-right: auto;
+		padding: 0;
+	}
+
 	section.cards {
 		width: 100%;
 		display: grid;

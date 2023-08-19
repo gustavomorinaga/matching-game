@@ -9,4 +9,5 @@ export interface IGameState {
 	matches: string[];
 	timerId: number | null;
 	time: number;
+	attempts: number;
 }

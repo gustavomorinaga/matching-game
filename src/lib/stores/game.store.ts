@@ -4,13 +4,14 @@ import type { IGameState } from '$lib/ts';
 
 export const initialState: IGameState = {
 	state: 'start',
-	size: 4,
+	size: 20,
 	grid: [],
 	maxMatches: 0,
 	selected: [],
 	matches: [],
 	timerId: null,
-	time: 120
+	time: 120,
+	attempts: 0
 };
 
 export const initGameState = () => {
