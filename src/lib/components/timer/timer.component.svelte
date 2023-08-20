@@ -23,13 +23,13 @@
 		& > strong {
 			min-width: 3rem;
 			color: $text-color;
-			font-size: 2rem;
-			text-align: right;
+			font-size: 1.5rem;
+			text-align: center;
 			font-variant-numeric: tabular-nums;
 
 			&.pulse {
 				color: $accent-color;
-				animation: pulse 1s infinite ease;
+				animation: pulse 1s infinite ease-in-out;
 			}
 		}
 	}
@@ -40,7 +40,7 @@
 
 			& > strong {
 				min-width: 2.5rem;
-				font-size: 1.5rem;
+				font-size: 1.25rem;
 			}
 		}
 	}
@@ -48,6 +48,7 @@
 	@keyframes pulse {
 		to {
 			scale: 1.4;
+			opacity: 0;
 		}
 	}
 </style>

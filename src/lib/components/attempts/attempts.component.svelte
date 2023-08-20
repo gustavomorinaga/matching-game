@@ -19,7 +19,7 @@
 			min-width: 2rem;
 			color: $text-color;
 			font-size: 2rem;
-			text-align: right;
+			text-align: center;
 			font-variant-numeric: tabular-nums;
 		}
 	}
@@ -30,7 +30,7 @@
 
 			& > strong {
 				min-width: 1.5rem;
-				font-size: 1.5rem;
+				font-size: 1.25rem;
 			}
 		}
 	}

@@ -53,8 +53,15 @@
 		overflow: hidden;
 	}
 
+	@media (width <= 1366px) {
+		div.container {
+			max-width: 720px;
+		}
+	}
+
 	@media (width <= 480px) {
 		div.container {
+			margin-top: -5vh;
 			padding: 1rem;
 		}
 	}

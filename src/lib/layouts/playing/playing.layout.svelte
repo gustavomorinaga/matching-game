@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Attempts, Card, Matches, Timer } from '$lib/components';
-	import { changeGameState, matchCards, pauseGame, selectCard, startTimer } from '$lib/functions';
+	import { Card, HUD } from '$lib/components';
+	import { changeGameState, matchCards, selectCard, startTimer } from '$lib/functions';
 	import { GAME } from '$lib/stores';
 
 	const columns = Math.ceil(Math.sqrt($GAME.grid.length));
@@ -12,17 +12,7 @@
 	$: $GAME.selected.length === 2 && matchCards();
 </script>
 
-<header>
-	<button class="pause" on:click={pauseGame}>⏸</button>
-
-	<div class="details">
-		<Timer />
-
-		<Attempts />
-	</div>
-</header>
-
-<Matches />
+<HUD />
 
 <section class="cards" style="--columns: {columns}; --rows: {rows}">
 	{#each $GAME.grid as card, cardIndex}
@@ -42,23 +32,6 @@
 </section>
 
 <style lang="scss">
-	header {
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
-
-		& > button.pause {
-			margin-right: auto;
-			padding: 0;
-		}
-
-		& > div.details {
-			display: flex;
-			align-items: center;
-			gap: 2rem;
-		}
-	}
-
 	section.cards {
 		width: 100%;
 		height: fit-content;
