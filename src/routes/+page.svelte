@@ -50,5 +50,12 @@
 		max-width: 1024px;
 		margin: 0 auto;
 		padding: 2rem;
+		overflow: hidden;
+	}
+
+	@media (width <= 480px) {
+		div.container {
+			padding: 1rem;
+		}
 	}
 </style>

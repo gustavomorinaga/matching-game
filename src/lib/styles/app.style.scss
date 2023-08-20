@@ -16,6 +16,7 @@ body {
 body {
 	position: relative;
 	font-family: 'Poppins', sans-serif;
+	line-height: normal;
 	color: $text-color;
 	background-color: $background-color;
 	overflow: hidden;
@@ -27,7 +28,7 @@ main {
 }
 
 h1 {
-	font-size: 4rem;
+	font-size: 3rem;
 	text-align: center;
 	text-transform: capitalize;
 }
@@ -41,7 +42,7 @@ h1 + button {
 
 button {
 	padding: 1rem 2rem;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-family: inherit;
 	font-weight: bold;
 	color: inherit;
@@ -50,4 +51,14 @@ button {
 	border: none;
 	text-transform: uppercase;
 	cursor: pointer;
+}
+
+@media (width <= 480px) {
+	h1 {
+		font-size: 2rem;
+	}
+
+	button {
+		font-size: 1rem;
+	}
 }

@@ -4,17 +4,44 @@
 	export let pulseTime = 10;
 </script>
 
-<h1 class="timer" class:pulse={$GAME.time <= pulseTime}>
-	{$GAME.time}
-</h1>
+<span class="timer">
+	Timer:
+	<strong class:pulse={$GAME.time <= pulseTime}>
+		{$GAME.time}
+	</strong>
+</span>
 
 <style lang="scss">
-	h1.timer {
+	span.timer {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: rgba($text-color, 0.5);
+		font-size: 1.5rem;
 		transition: color 0.3s ease;
 
-		&.pulse {
-			color: $accent-color;
-			animation: pulse 1s infinite ease;
+		& > strong {
+			min-width: 3rem;
+			color: $text-color;
+			font-size: 2rem;
+			text-align: right;
+			font-variant-numeric: tabular-nums;
+
+			&.pulse {
+				color: $accent-color;
+				animation: pulse 1s infinite ease;
+			}
+		}
+	}
+
+	@media (width <= 480px) {
+		span.timer {
+			font-size: 1rem;
+
+			& > strong {
+				min-width: 2.5rem;
+				font-size: 1.5rem;
+			}
 		}
 	}
 
