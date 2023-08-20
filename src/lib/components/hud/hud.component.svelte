@@ -5,17 +5,19 @@
 	let rotate = false;
 
 	const restartGame = () => {
-		resetGame();
-
 		rotate = true;
-		setTimeout(() => (rotate = false), 500);
+
+		setTimeout(() => {
+			rotate = false;
+			resetGame();
+		}, 500);
 	};
 </script>
 
 <header class="hud">
 	<div class="actions">
 		<button title="Pause" on:click={pauseGame}>⏸</button>
-		<button title="Restart" class:rotate on:click={restartGame}>🔁</button>
+		<button title="Restart" class:rotate disabled={rotate} on:click={restartGame}>🔁</button>
 		<button title="Home" on:click={() => changeGameState('start')}>🏠</button>
 	</div>
 
@@ -31,6 +33,8 @@
 	header.hud {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 1rem;
 		width: 100%;
 
 		& > div:is(.actions, .details) {
@@ -44,7 +48,7 @@
 			border-radius: 0.5rem;
 
 			& > button {
-				padding: 0 0.75rem;
+				padding: 0.25rem 0.75rem;
 				height: 100%;
 
 				&.rotate {

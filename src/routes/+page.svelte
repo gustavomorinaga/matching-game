@@ -61,6 +61,7 @@
 
 	@media (width <= 480px) {
 		div.container {
+			height: calc(100vh + 5vh);
 			margin-top: -5vh;
 			padding: 1rem;
 		}

@@ -16,7 +16,7 @@
 	button.card {
 		aspect-ratio: 1/1;
 		padding: 2rem;
-		font-size: 5vw;
+		font-size: 3em;
 		background-color: $background-color-alt;
 		border: 4px solid transparent;
 		transition: background-color 0.3s 0.3s ease-out, border-color 0.3s ease-out,
@@ -55,7 +55,7 @@
 	@media (width <= 480px) {
 		button.card {
 			padding: 1rem;
-			font-size: 8vw;
+			font-size: 2em;
 		}
 	}
 </style>
