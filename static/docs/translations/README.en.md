@@ -10,7 +10,7 @@
 <!-- Banner Section -->
 <p align="center">
   <a href="#📖-introduction">
-    <img src="./static/assets/banner.png" alt="Repository Banner" />
+    <img src="../../assets/banner.png" alt="Repository Banner" />
   </a>
 </p>
 <h3 align="center">
@@ -47,8 +47,8 @@
 
 <!-- ## 🌎 Translations -->
 
-<kbd>[<img title="English" alt="English" src="https://flagicons.lipis.dev/flags/4x3/us.svg" width="22">](./static/docs/translations/README.en.md)</kbd>
-<kbd>[<img title="Português Brasileiro" alt="Português Brasileiro" src="https://flagicons.lipis.dev/flags/4x3/br.svg" width="22">](./static/docs/translations/README.pt.md)</kbd>
+<kbd>[<img title="English" alt="English" src="https://flagicons.lipis.dev/flags/4x3/us.svg" width="22">](./README.en.md)</kbd>
+<kbd>[<img title="Português Brasileiro" alt="Português Brasileiro" src="https://flagicons.lipis.dev/flags/4x3/br.svg" width="22">](./README.pt.md)</kbd>
 
 <!-- Introduction Section -->
 
@@ -81,7 +81,7 @@ This is a simple matching game made with SvelteKit and TypeScript.
 
 ## 📜 License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) page for details.
+This project is licensed under the **MIT License** - see the [LICENSE](../../../LICENSE) page for details.
 
 <!-- Acknowledgment Section -->
 
